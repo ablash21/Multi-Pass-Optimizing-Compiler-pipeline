@@ -7,11 +7,6 @@ A complete multi-pass optimizing compiler pipeline built for **BuritoJava** (a s
 ## Table of Contents
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
-- [Pipeline Modules](#pipeline-modules)
-  - [Module 1: Variable Property Checking](#module-1-variable-property-checking-p1java)
-  - [Module 2: Intermediate Code Generation](#module-2-intermediate-code-generation-p2java)
-  - [Module 3: Conditional Constant Propagation](#module-3-conditional-constant-propagation-p3java)
-  - [Module 4: Function Inlining](#module-4-function-inlining-p4java)
 - [Prerequisites](#prerequisites)
 - [How to Build and Run](#how-to-build-and-run)
   - [Option A: Automated Execution Script (`run.sh`)](#option-a-automated-execution-script-runsh)
