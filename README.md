@@ -7,10 +7,9 @@ A complete multi-pass optimizing compiler pipeline built for **BuritoJava** (a s
 ## Table of Contents
 - [Overview](#overview)
 - [Repository Structure](#repository-structure)
-- [Prerequisites](#prerequisites)
-- [How to Build and Run](#how-to-build-and-run)
-  - [Option A: Automated Execution Script (`run.sh`)](#option-a-automated-execution-script-runsh)
-  - [Option B: Manual Compilation & Execution](#option-b-manual-compilation--execution)
+- [How to Build and Run]
+- [Sample inputs]
+- -[Other Comments]
 
 ---
 
@@ -44,3 +43,37 @@ The compiler operates in a 4-stage pipeline:
 │   └── ...                # JTB/JavaCC generated parser & visitors
 ├── run.sh                 # Automation shell script
 └── README.md
+
+## Build and Run
+
+### Using the Compilation Script
+
+The complete compiler pipeline consists of **four stages**. To compile and run an input Java program through all four stages, use the following script:
+
+```bash
+./compiler.sh inputProgram.java [output.java]
+```
+
+The script expects both `javac` and `java` to be installed and available in the system `PATH`. If the output file is not specified, the script will use its default output configuration.
+
+### Running Each Stage Manually
+
+Alternatively, each compiler stage can be executed manually. For module `x`, compile the corresponding `Px.java` file and then run it using:
+
+```bash
+javac Px.java && java P.java < input.java > output.java
+```
+
+Here, `x` denotes the **module number**. The output of one stage can be used as the input to the next stage to obtain the final transformed Java program.
+
+### Sample inputs
+
+Additional  sample inputs can be found on the course webpage:
+
+[CS6013 Test Cases](https://www.cse.iitm.ac.in/~krishna/cs6013/subsets.html?utm_source=chatgpt.com)
+
+## Other Comments
+
+1. The Bash scripts used in this project were generated with the assistance of LLMs.
+2. **Modules 3 and 4** were developed with the assistance of LLMs, as permitted/expected as part of the course requirements.
+
